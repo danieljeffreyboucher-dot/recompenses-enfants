@@ -336,7 +336,10 @@ function normalizeState(data) {
 
 function save() {
   if (!S) return;
-  try { REF.set(S); } catch(e) {}
+  REF.set(S).catch(function(err) {
+    console.error('Erreur Firebase save:', err);
+    toast('⚠ ERREUR SYNC — vérifier les règles Firebase');
+  });
 }
 
 function getDone(task, pid) {
@@ -856,20 +859,26 @@ REF.on('value', function(snapshot) {
   var data = snapshot.val();
   if (data) {
     S = normalizeState(data);
+    render();
   } else {
-    // Première utilisation : écrire les valeurs par défaut
+    // Première utilisation : afficher l'app de suite, puis écrire les défauts
     S = deepCopy(DEFAULTS);
-    REF.set(S);
-    return; // on('value') se redéclenchera avec les données
+    render();
+    REF.set(S).catch(function(err) {
+      console.error('Erreur Firebase init:', err);
+      toast('⚠ ERREUR INIT — vérifier les règles Firebase');
+    });
   }
-  render();
 }, function(err) {
   // Erreur de lecture (règles de sécurité, pas de connexion, etc.)
+  console.error('Erreur Firebase read:', err);
   $('app').innerHTML =
     '<div class="loading-screen">' +
     '<div style="font-size:32px;margin-bottom:12px">⚠️</div>' +
     '<div class="loading-txt" style="color:var(--red)">Erreur de connexion</div>' +
-    '<div style="font-family:\'Rajdhani\',sans-serif;font-size:12px;color:var(--sub);margin-top:8px;text-align:center;padding:0 20px">' + err.message + '</div>' +
+    '<div style="font-family:\'Rajdhani\',sans-serif;font-size:12px;color:var(--sub);margin-top:8px;text-align:center;padding:0 20px">' +
+      err.message + '<br><br>Vérifie les règles Firebase :<br>"+.read": true, "+.write": true' +
+    '</div>' +
     '</div>';
 });
 </script>
