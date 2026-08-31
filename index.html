@@ -33,20 +33,14 @@
 html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(circle,rgba(100,120,255,.04) 1px,transparent 1px);background-size:22px 22px}
 #app{position:relative;z-index:1;max-width:480px;margin:0 auto;min-height:100vh;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column}
-
-/* Loading */
 .loading-screen{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;height:100vh;font-family:'Rajdhani',sans-serif}
 .loading-icon{font-size:40px;margin-bottom:16px;-webkit-animation:pulse 1.5s infinite;animation:pulse 1.5s infinite}
 @-webkit-keyframes pulse{0%,100%{opacity:.4;-webkit-transform:scale(.95)}50%{opacity:1;-webkit-transform:scale(1.05)}}
 @keyframes pulse{0%,100%{opacity:.4;transform:scale(.95)}50%{opacity:1;transform:scale(1.05)}}
 .loading-txt{font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--sub)}
-
-/* Sync dot */
 .sync-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-left:6px;vertical-align:middle;-webkit-flex-shrink:0;flex-shrink:0}
 .sync-dot.ok{background:var(--green)}
 .sync-dot.off{background:var(--orange);-webkit-animation:blink 1.2s infinite;animation:blink 1.2s infinite}
-
-/* Header */
 .hdr{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:space-between;justify-content:space-between;padding:16px 16px 12px;position:-webkit-sticky;position:sticky;top:0;z-index:50;background:var(--bg)}
 .hdr-logo{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}
 .hdr-logo-icon{width:32px;height:32px;background:var(--gold-bg);border:1.5px solid var(--gold-brd);border-radius:var(--r-sm);display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:15px;margin-right:8px}
@@ -56,14 +50,12 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .btn-lock{width:36px;height:36px;border:1.5px solid var(--border);background:var(--card);border-radius:var(--r-sm);cursor:pointer;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:16px;transition:all .15s}
 .btn-lock:hover{background:var(--card2)}
 .btn-lock.on{background:var(--gold-bg);border-color:var(--gold-brd)}
-
-/* Scoreboard */
 .scoreboard{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;padding:0 16px 14px}
 .player-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 12px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;-webkit-flex:1;flex:1}
 .player-card:first-child{margin-right:8px}
 .player-card:last-child{margin-left:8px}
 .player-card[data-pid="kaylie"]{--pc:var(--p1);--pg:var(--p1-glow);--pb:var(--p1-brd)}
-.player-card[data-pid="leo"]   {--pc:var(--p2);--pg:var(--p2-glow);--pb:var(--p2-brd)}
+.player-card[data-pid="leo"]{--pc:var(--p2);--pg:var(--p2-glow);--pb:var(--p2-brd)}
 .player-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--pc)}
 .player-card.active{border-color:var(--pb);box-shadow:0 0 0 1px var(--pc),0 0 22px var(--pg)}
 .player-card:not(.active):hover{background:var(--card2)}
@@ -81,11 +73,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .pc-pending .dot{width:5px;height:5px;background:var(--orange);border-radius:50%;-webkit-animation:blink 1.4s infinite;animation:blink 1.4s infinite;margin-right:4px}
 @-webkit-keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-
-/* Admin banner */
 .admin-banner{margin:0 16px 10px;padding:8px 14px;background:var(--gold-bg);border:1px solid var(--gold-brd);border-radius:var(--r-sm);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.08em}
-
-/* Content */
 .content{-webkit-flex:1;flex:1;padding:0 16px 110px}
 .sec-hd{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:space-between;justify-content:space-between;margin-bottom:12px}
 .sec-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--sub)}
@@ -98,8 +86,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .chip.on{background:var(--gold-bg);color:var(--gold);border-color:var(--gold-brd)}
 .slbl{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:16px 0 10px}
 .slbl.orange{color:var(--orange)}
-
-/* Mission card */
 .mission-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r);padding:12px 14px;margin-bottom:8px;position:relative;transition:background .15s}
 .mission-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;border-radius:3px 0 0 3px;background:var(--border)}
 .mission-card.has-pending::before{background:var(--orange)}
@@ -122,8 +108,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .pa.st-reject:hover{background:var(--red-bg);border-color:var(--red);color:var(--red)}
 .pa-l{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}
 .pa-l span:first-child{margin-right:5px}
-
-/* Manage */
 .manage-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r);padding:10px 12px;margin-bottom:7px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}
 .mgico{font-size:22px;-webkit-flex-shrink:0;flex-shrink:0;margin-right:10px}
 .mginfo{-webkit-flex:1;flex:1;min-width:0;margin-right:8px}
@@ -132,8 +116,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .mgval{font-family:'Orbitron',monospace;font-size:12px;font-weight:700;color:var(--gold);white-space:nowrap;margin-right:8px}
 .btn-del{width:27px;height:27px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;background:transparent;border:none;color:var(--muted);border-radius:var(--r-sm);font-size:13px;cursor:pointer;transition:all .15s}
 .btn-del:hover{color:var(--red);background:var(--red-bg)}
-
-/* Shop */
 .shop-who{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin-bottom:14px;padding:8px 13px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sub)}
 .shop-who .amt{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--gold);margin-left:auto;font-variant-numeric:tabular-nums}
 .shop-grid{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;margin:-5px}
@@ -144,8 +126,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .rc-name{font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;line-height:1.3}
 .rc-cost{font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:var(--gold);background:var(--gold-bg);border:1px solid var(--gold-brd);border-radius:4px;padding:2px 10px;display:inline-block;font-variant-numeric:tabular-nums}
 .rc-miss{font-size:10px;color:var(--muted);font-weight:700;margin-top:5px;font-family:'Rajdhani',sans-serif;text-transform:uppercase}
-
-/* Stats */
 .stat-row{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
 .stat-lbl{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sub);width:90px;-webkit-flex-shrink:0;flex-shrink:0;margin-right:10px}
 .cmp-bar{-webkit-flex:1;flex:1;height:8px;border-radius:4px;overflow:hidden;display:-webkit-flex;display:flex;margin-right:10px}
@@ -154,8 +134,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .stat-vals{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;font-variant-numeric:tabular-nums;min-width:80px;text-align:right}
 .lv-bar-wrap{background:var(--card2);border-radius:4px;height:8px;overflow:hidden;margin-bottom:5px}
 .lv-bar-fill{height:100%;border-radius:4px;transition:width .4s}
-
-/* History */
 .hist-item{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
 .hi-ico{width:32px;height:32px;border-radius:50%;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:14px;-webkit-flex-shrink:0;flex-shrink:0;margin-right:10px}
 .hi-ico.earn{background:var(--green-bg)}.hi-ico.spend{background:var(--orange-bg)}
@@ -164,14 +142,10 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 .hi-meta{font-size:11px;color:var(--sub);font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:.04em}
 .hi-amt{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;-webkit-flex-shrink:0;flex-shrink:0;font-variant-numeric:tabular-nums}
 .hi-amt.earn{color:var(--green)}.hi-amt.spend{color:var(--red)}
-
-/* Nav */
 .nav{position:fixed;bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:100%;max-width:480px;background:var(--surf);border-top:1px solid var(--border);display:-webkit-flex;display:flex;padding:6px 10px;padding-bottom:calc(6px + env(safe-area-inset-bottom));z-index:50}
 .nav-btn{-webkit-flex:1;flex:1;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;padding:6px 4px;background:none;border:none;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);cursor:pointer;border-radius:var(--r-sm);transition:all .15s}
 .nav-btn .ni{font-size:20px;transition:-webkit-transform .2s cubic-bezier(.22,1,.36,1);transition:transform .2s cubic-bezier(.22,1,.36,1);margin-bottom:3px}
 .nav-btn.on{color:var(--gold)}.nav-btn.on .ni{-webkit-transform:scale(1.18);transform:scale(1.18)}
-
-/* Modal */
 .overlay{position:fixed;inset:0;background:rgba(4,5,12,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);z-index:200;display:-webkit-flex;display:flex;-webkit-align-items:flex-end;align-items:flex-end;-webkit-justify-content:center;justify-content:center}
 .modal{background:var(--surf);border-radius:20px 20px 0 0;width:100%;max-width:480px;padding:18px 20px 22px;padding-bottom:calc(22px + env(safe-area-inset-bottom));-webkit-animation:up .28s cubic-bezier(.22,1,.36,1);animation:up .28s cubic-bezier(.22,1,.36,1);max-height:90vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
 @-webkit-keyframes up{from{-webkit-transform:translateY(100%)}to{-webkit-transform:translateY(0)}}
@@ -197,8 +171,6 @@ select.fi{cursor:pointer}
 .btn-p:hover{opacity:.9;-webkit-transform:translateY(-1px);transform:translateY(-1px)}
 .btn-s{width:100%;padding:11px;background:transparent;color:var(--sub);border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;margin-top:8px;transition:all .15s}
 .btn-s:hover{background:var(--card);color:var(--text)}
-
-/* Toast */
 .toast{position:fixed;bottom:86px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:20px;padding:9px 18px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;z-index:400;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.4);-webkit-animation:tIn .25s cubic-bezier(.22,1,.36,1),tOut .25s 2.6s forwards;animation:tIn .25s cubic-bezier(.22,1,.36,1),tOut .25s 2.6s forwards;pointer-events:none}
 @-webkit-keyframes tIn{from{opacity:0;-webkit-transform:translateX(-50%) translateY(12px)}to{opacity:1;-webkit-transform:translateX(-50%) translateY(0)}}
 @keyframes tIn{from{opacity:0;transform:translateX(-50%) translateY(12px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
@@ -221,666 +193,90 @@ select.fi{cursor:pointer}
     <div class="loading-txt">Connexion...</div>
   </div>
 </div>
-
-<!-- Firebase v8 — compatible iOS 12 (pas de modules ES) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-app.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase-database.min.js"></script>
 <script>
-// ── Firebase ──────────────────────────────────────────────────
-var firebaseConfig = {
-  apiKey:            "AIzaSyCbylWSybvUTkLnmkJN3AR1PQnrYHiXgcc",
-  authDomain:        "recompense-enfants.firebaseapp.com",
-  databaseURL:       "https://recompense-enfants-default-rtdb.firebaseio.com",
-  projectId:         "recompense-enfants",
-  storageBucket:     "recompense-enfants.firebasestorage.app",
-  messagingSenderId: "907291435611",
-  appId:             "1:907291435611:web:d4f1313e3dbc35e7e9d57e"
-};
+var firebaseConfig={apiKey:"AIzaSyCbylWSybvUTkLnmkJN3AR1PQnrYHiXgcc",authDomain:"recompense-enfants.firebaseapp.com",databaseURL:"https://recompense-enfants-default-rtdb.firebaseio.com",projectId:"recompense-enfants",storageBucket:"recompense-enfants.firebasestorage.app",messagingSenderId:"907291435611",appId:"1:907291435611:web:d4f1313e3dbc35e7e9d57e"};
 firebase.initializeApp(firebaseConfig);
-var DB  = firebase.database();
-var REF = DB.ref('data');         // toutes les données sous /data
-
-// ── Defaults ─────────────────────────────────────────────────
-var DEFAULTS = {
-  children: {
-    kaylie: {name:'Kaylie', emoji:'🦋', balance:0},
-    leo:    {name:'Léo',   emoji:'🦁', balance:0}
-  },
-  tasks: [
-    {id:'t1', title:'Ranger sa chambre',    value:2, assign:'both', icon:'🛏️', done:{}},
-    {id:'t2', title:'Faire la vaisselle',   value:3, assign:'both', icon:'🍽️', done:{}},
-    {id:'t3', title:'Faire ses devoirs',    value:5, assign:'both', icon:'📚', done:{}},
-    {id:'t4', title:'Sortir les poubelles', value:2, assign:'both', icon:'🗑️', done:{}},
-    {id:'t5', title:'Préparer le repas',    value:4, assign:'both', icon:'🥗', done:{}},
-    {id:'t6', title:'Nourrir les animaux',  value:2, assign:'both', icon:'🐾', done:{}}
-  ],
-  rewards: [
-    {id:'r1', title:"30 min d'écran",    cost:10, icon:'📱'},
-    {id:'r2', title:'Choisir le souper', cost:8,  icon:'🍕'},
-    {id:'r3', title:'Soirée film',       cost:15, icon:'🎬'},
-    {id:'r4', title:'Coucher plus tard', cost:12, icon:'🌙'},
-    {id:'r5', title:'Activité spéciale', cost:25, icon:'🎡'},
-    {id:'r6', title:'Collation au choix',cost:5,  icon:'🍦'}
-  ],
-  history: [],
-  pin: '1234'
-};
-
-// ── State ────────────────────────────────────────────────────
-var S = null;
-var pm = false, shopFor = 'kaylie', tab = 'missions', filter = 'all', modal = null;
-var online = false;
-
-// ── Helpers ──────────────────────────────────────────────────
-function $(id)  { return document.getElementById(id); }
-function uid()  { return '_' + Math.random().toString(36).slice(2, 9); }
-function fmt(n) { return Number(n).toFixed(2).replace('.', ','); }
-
-// Firebase retourne parfois des objets à la place de tableaux — on normalise
-function toArray(val) {
-  if (!val) return [];
-  if (Array.isArray(val)) return val;
-  var arr = [], keys = Object.keys(val);
-  for (var i = 0; i < keys.length; i++) arr.push(val[keys[i]]);
-  return arr;
-}
-
-function deepCopy(obj) { return JSON.parse(JSON.stringify(obj)); }
-
-function normalizeState(data) {
-  if (!data) return deepCopy(DEFAULTS);
-  var s = {
-    children: {
-      kaylie: {},
-      leo:    {}
-    },
-    tasks:   [],
-    rewards: [],
-    history: [],
-    pin:     data.pin || '1234'
-  };
-  // children
-  var dk = DEFAULTS.children.kaylie, dl = DEFAULTS.children.leo;
-  var ck = (data.children && data.children.kaylie) || {};
-  var cl = (data.children && data.children.leo)    || {};
-  s.children.kaylie = {name: ck.name||dk.name, emoji: ck.emoji||dk.emoji, balance: ck.balance||0};
-  s.children.leo    = {name: cl.name||dl.name, emoji: cl.emoji||dl.emoji, balance: cl.balance||0};
-  // tasks — chaque tâche doit avoir done:{}
-  var rawTasks = toArray(data.tasks);
-  for (var i = 0; i < rawTasks.length; i++) {
-    var t = rawTasks[i];
-    if (!t) continue;
-    s.tasks.push({
-      id:     t.id     || uid(),
-      title:  t.title  || '',
-      value:  t.value  || 1,
-      assign: t.assign || 'both',
-      icon:   t.icon   || '📌',
-      done:   t.done   || {}
-    });
-  }
-  // rewards
-  var rawR = toArray(data.rewards);
-  for (var j = 0; j < rawR.length; j++) {
-    var r = rawR[j];
-    if (!r) continue;
-    s.rewards.push({id: r.id||uid(), title: r.title||'', cost: r.cost||1, icon: r.icon||'🎁'});
-  }
-  // history
-  var rawH = toArray(data.history);
-  for (var k = 0; k < rawH.length; k++) {
-    if (rawH[k]) s.history.push(rawH[k]);
-  }
+var DB=firebase.database(),REF=DB.ref('data');
+var DEFAULTS={children:{kaylie:{name:'Kaylie',emoji:'🦋',balance:0},leo:{name:'Léo',emoji:'🦁',balance:0}},tasks:[{id:'t1',title:'Ranger sa chambre',value:2,assign:'both',icon:'🛏️',done:{}},{id:'t2',title:'Faire la vaisselle',value:3,assign:'both',icon:'🍽️',done:{}},{id:'t3',title:'Faire ses devoirs',value:5,assign:'both',icon:'📚',done:{}},{id:'t4',title:'Sortir les poubelles',value:2,assign:'both',icon:'🗑️',done:{}},{id:'t5',title:'Préparer le repas',value:4,assign:'both',icon:'🥗',done:{}},{id:'t6',title:'Nourrir les animaux',value:2,assign:'both',icon:'🐾',done:{}}],rewards:[{id:'r1',title:"30 min d'écran",cost:10,icon:'📱'},{id:'r2',title:'Choisir le souper',cost:8,icon:'🍕'},{id:'r3',title:'Soirée film',cost:15,icon:'🎬'},{id:'r4',title:'Coucher plus tard',cost:12,icon:'🌙'},{id:'r5',title:'Activité spéciale',cost:25,icon:'🎡'},{id:'r6',title:'Collation au choix',cost:5,icon:'🍦'}],history:[],pin:'1234'};
+var S=null,pm=false,shopFor='kaylie',tab='missions',filter='all',modal=null,online=false;
+function $(id){return document.getElementById(id);}
+function uid(){return '_'+Math.random().toString(36).slice(2,9);}
+function fmt(n){return Number(n).toFixed(2).replace('.',',');}
+function toArray(val){if(!val)return[];if(Array.isArray(val))return val;var arr=[],keys=Object.keys(val);for(var i=0;i<keys.length;i++)arr.push(val[keys[i]]);return arr;}
+function deepCopy(obj){return JSON.parse(JSON.stringify(obj));}
+function normalizeState(data){
+  if(!data)return deepCopy(DEFAULTS);
+  var s={children:{kaylie:{},leo:{}},tasks:[],rewards:[],history:[],pin:data.pin||'1234'};
+  var dk=DEFAULTS.children.kaylie,dl=DEFAULTS.children.leo;
+  var ck=(data.children&&data.children.kaylie)||{},cl=(data.children&&data.children.leo)||{};
+  s.children.kaylie={name:ck.name||dk.name,emoji:ck.emoji||dk.emoji,balance:ck.balance||0};
+  s.children.leo={name:cl.name||dl.name,emoji:cl.emoji||dl.emoji,balance:cl.balance||0};
+  var rawTasks=toArray(data.tasks);
+  for(var i=0;i<rawTasks.length;i++){var t=rawTasks[i];if(!t)continue;s.tasks.push({id:t.id||uid(),title:t.title||'',value:t.value||1,assign:t.assign||'both',icon:t.icon||'📌',done:t.done||{}});}
+  var rawR=toArray(data.rewards);
+  for(var j=0;j<rawR.length;j++){var r=rawR[j];if(!r)continue;s.rewards.push({id:r.id||uid(),title:r.title||'',cost:r.cost||1,icon:r.icon||'🎁'});}
+  var rawH=toArray(data.history);
+  for(var k=0;k<rawH.length;k++){if(rawH[k])s.history.push(rawH[k]);}
   return s;
 }
-
-function save() {
-  if (!S) return;
-  REF.set(S).catch(function(err) {
-    console.error('Erreur Firebase save:', err);
-    toast('⚠ ERREUR SYNC — vérifier les règles Firebase');
-  });
-}
-
-function getDone(task, pid) {
-  if (!task.done) return null;
-  return task.done[pid] || null;
-}
-
-function totalEarned(cid) {
-  var total = 0;
-  for (var i = 0; i < S.history.length; i++) {
-    if (S.history[i].cid === cid && S.history[i].type === 'earn') total += S.history[i].amount;
-  }
-  return total;
-}
-
-function lvlOf(cid) {
-  var te = totalEarned(cid);
-  return {lvl: Math.floor(te / 15) + 1, pct: (te % 15) / 15};
-}
-
-function pendingFor(cid) {
-  var count = 0;
-  for (var i = 0; i < S.tasks.length; i++) {
-    var t = S.tasks[i];
-    if ((t.assign === 'both' || t.assign === cid) && getDone(t, cid) === 'pending') count++;
-  }
-  return count;
-}
-
-function hasPending(task) {
-  if (getDone(task, 'kaylie') === 'pending') return true;
-  if (getDone(task, 'leo')    === 'pending') return true;
-  return false;
-}
-
-function toast(msg) {
-  var el = document.createElement('div');
-  el.className = 'toast'; el.textContent = msg;
-  document.body.appendChild(el);
-  setTimeout(function() { if (el.parentNode) el.parentNode.removeChild(el); }, 3100);
-}
-
-function coins(x, y, n) {
-  n = n || 6;
-  for (var i = 0; i < n; i++) {
-    (function(delay) {
-      var el = document.createElement('div');
-      el.className = 'coin'; el.textContent = '💰';
-      el.style.cssText = 'left:' + (x + (Math.random() - .5) * 60) + 'px;top:' + y + 'px;animation-delay:' + delay + 's';
-      document.body.appendChild(el);
-      setTimeout(function() { if (el.parentNode) el.parentNode.removeChild(el); }, 1200);
-    })(i * 0.06);
-  }
-}
-
-// ── Render ───────────────────────────────────────────────────
-function render() {
-  if (!S) return;
-  $('app').innerHTML =
-    hdr() +
-    (pm ? '<div class="admin-banner">🔓 MODE ADMIN ACTIVÉ</div>' : '') +
-    scoreboard() +
-    '<div class="content">' + content() + '</div>' +
-    nav() +
-    (modal ? overlay() : '');
-  bind();
-}
-
-function syncDot() {
-  return '<span class="sync-dot ' + (online ? 'ok' : 'off') + '" title="' + (online ? 'En ligne' : 'Hors ligne') + '"></span>';
-}
-
-function hdr() {
-  return '<div class="hdr">' +
-    '<div class="hdr-logo"><div class="hdr-logo-icon">⚡</div>' +
-    '<div class="hdr-title"><span>Missions</span> Familiales' + syncDot() + '</div></div>' +
-    '<div class="hdr-right"><button class="btn-lock' + (pm ? ' on' : '') + '" onclick="clickLock()">' + (pm ? '🔓' : '🔑') + '</button></div>' +
-    '</div>';
-}
-
-function scoreboard() {
-  var kb = S.children.kaylie.balance, lb = S.children.leo.balance;
-  return '<div class="scoreboard">' +
-    playerCard('kaylie', kb > lb) +
-    '<div class="vs">VS</div>' +
-    playerCard('leo', lb > kb) +
-    '</div>';
-}
-
-function playerCard(pid, lead) {
-  var c = S.children[pid], info = lvlOf(pid), pend = pendingFor(pid);
-  var col = pid === 'kaylie' ? 'var(--p1)' : 'var(--p2)';
-  return '<div class="player-card' + (shopFor === pid ? ' active' : '') + '" data-pid="' + pid + '" onclick="setShopFor(\'' + pid + '\')">' +
-    (lead ? '<div class="pc-leader">👑</div>' : '') +
-    '<span class="pc-emoji">' + c.emoji + '</span>' +
-    '<div class="pc-name">' + c.name + '</div>' +
-    '<div class="pc-balance">' + fmt(c.balance) + '<span class="u">$</span></div>' +
-    '<div class="pc-level">' +
-      '<span class="pc-lvl" style="color:' + col + '">Niv.' + info.lvl + '</span>' +
-      '<div class="pc-bar"><div class="pc-bar-fill" style="width:' + Math.round(info.pct * 100) + '%;background:' + col + '"></div></div>' +
-    '</div>' +
-    (pend > 0 ? '<div class="pc-pending"><span class="dot"></span>' + pend + ' en attente</div>' : '') +
-    '</div>';
-}
-
-function nav() {
-  var tabs = [['missions','🎯','Missions'],['shop','🛍️','Boutique'],['stats','📊','Stats'],['history','📋','Journal']];
-  var out = '<nav class="nav">';
-  for (var i = 0; i < tabs.length; i++) {
-    out += '<button class="nav-btn' + (tab === tabs[i][0] ? ' on' : '') + '" onclick="setTab(\'' + tabs[i][0] + '\')">' +
-      '<span class="ni">' + tabs[i][1] + '</span>' + tabs[i][2] + '</button>';
-  }
-  return out + '</nav>';
-}
-
-function content() {
-  if (tab === 'missions') return missions();
-  if (tab === 'shop')     return shop();
-  if (tab === 'stats')    return stats();
-  if (tab === 'history')  return history();
-  return '';
-}
-
-// ── Missions ─────────────────────────────────────────────────
-function missions() {
-  if (pm) return missionsAdmin();
-  var tasks = [], i, t;
-  for (i = 0; i < S.tasks.length; i++) {
-    t = S.tasks[i];
-    if (filter === 'pending' && !hasPending(t)) continue;
-    if (filter === 'available') {
-      var kd = getDone(t, 'kaylie'), ld = getDone(t, 'leo');
-      var kv = t.assign === 'both' || t.assign === 'kaylie';
-      var lv = t.assign === 'both' || t.assign === 'leo';
-      if ((kv && kd) || (lv && ld)) continue;
-    }
-    tasks.push(t);
-  }
-  var out = '<div class="sec-hd"><div class="sec-title">Missions</div></div>' +
-    '<div class="chips">' +
-    chip('all','Toutes') + chip('available','Disponibles') + chip('pending','En attente') +
-    '</div>';
-  if (tasks.length === 0) return out + empty('🎯', 'Aucune mission', 'Toutes les missions correspondent à ce filtre.');
-  for (i = 0; i < tasks.length; i++) out += missionCard(tasks[i]);
-  return out;
-}
-
-function chip(v, l) {
-  return '<div class="chip' + (filter === v ? ' on' : '') + '" onclick="setFilter(\'' + v + '\')">' + l + '</div>';
-}
-
-function missionCard(t) {
-  return '<div class="mission-card' + (hasPending(t) ? ' has-pending' : '') + '">' +
-    '<div class="mc-top">' +
-      '<div class="mc-icon">' + (t.icon||'📌') + '</div>' +
-      '<div class="mc-info"><div class="mc-name">' + t.title + '</div>' +
-        '<div class="mc-meta">' + (t.assign==='both'?'Tous les deux':(S.children[t.assign]?S.children[t.assign].name:t.assign)) + '</div>' +
-      '</div>' +
-      '<div class="mc-value">+' + fmt(t.value) + '$</div>' +
-    '</div>' +
-    '<div class="duo-row">' + playerAction(t,'kaylie') + playerAction(t,'leo') + '</div>' +
-    '</div>';
-}
-
-function playerAction(t, pid) {
-  var c = S.children[pid], vis = t.assign==='both'||t.assign===pid, st = getDone(t, pid);
-  if (!vis)           return '<div class="pa st-disabled"><div class="pa-l"><span>'+c.emoji+'</span><span>'+c.name+'</span></div><span>—</span></div>';
-  if (st==='pending') return '<div class="pa st-pending"><div class="pa-l"><span>'+c.emoji+'</span><span>'+c.name+'</span></div><span>⏳</span></div>';
-  return '<div class="pa" onclick="markDone(\''+t.id+'\',\''+pid+'\')"><div class="pa-l"><span>'+c.emoji+'</span><span>'+c.name+'</span></div><span>▶</span></div>';
-}
-
-function missionsAdmin() {
-  var pend = [], i;
-  for (i = 0; i < S.tasks.length; i++) { if (hasPending(S.tasks[i])) pend.push(S.tasks[i]); }
-  var out = '<div class="sec-hd"><div class="sec-title">Missions</div>' +
-    '<button class="btn-add" onclick="openModal(\'addTask\')">＋ Ajouter</button></div>';
-  if (pend.length > 0) {
-    out += '<div class="slbl orange">⚡ En attente d\'approbation</div>';
-    for (i = 0; i < pend.length; i++) out += approveCard(pend[i]);
-  }
-  out += '<div class="slbl">Toutes les missions</div>';
-  if (S.tasks.length === 0) return out + empty('🎯','Aucune mission','');
-  for (i = 0; i < S.tasks.length; i++) out += manageCard(S.tasks[i]);
-  return out;
-}
-
-function approveCard(t) {
-  var out = '', pids = ['kaylie','leo'];
-  for (var i = 0; i < pids.length; i++) {
-    var pid = pids[i];
-    if (getDone(t, pid) !== 'pending') continue;
-    var c = S.children[pid];
-    out += '<div class="mission-card has-pending">' +
-      '<div class="mc-top"><div class="mc-icon">'+(t.icon||'📌')+'</div>' +
-      '<div class="mc-info"><div class="mc-name">'+t.title+'</div><div class="mc-meta">'+c.emoji+' '+c.name+'</div></div>' +
-      '<div class="mc-value">+'+fmt(t.value)+'$</div></div>' +
-      '<div class="duo-row">' +
-        '<div class="pa st-reject" onclick="rejectTask(\''+t.id+'\',\''+pid+'\')"><div class="pa-l"><span>✕</span><span>Refuser</span></div></div>' +
-        '<div class="pa st-approve" onclick="approveTask(\''+t.id+'\',\''+pid+'\',event)">' +
-          '<div class="pa-l"><span>✓</span><span>Approuver</span></div>' +
-          '<span style="font-family:\'Orbitron\',monospace;font-size:10px">+'+fmt(t.value)+'$</span></div>' +
-      '</div></div>';
-  }
-  return out;
-}
-
-function manageCard(t) {
-  var a = t.assign==='both'?'Tous les deux':(S.children[t.assign]?S.children[t.assign].name:t.assign);
-  return '<div class="manage-card">' +
-    '<span class="mgico">'+(t.icon||'📌')+'</span>' +
-    '<div class="mginfo"><div class="mgname">'+t.title+'</div><div class="mgmeta">'+a+'</div></div>' +
-    '<div class="mgval">'+fmt(t.value)+'$</div>' +
-    '<button class="btn-del" onclick="delTask(\''+t.id+'\')">🗑</button></div>';
-}
-
-// ── Shop ─────────────────────────────────────────────────────
-function shop() {
-  var c = S.children[shopFor];
-  var out = '<div class="sec-hd"><div class="sec-title">Boutique</div>' +
-    (pm ? '<button class="btn-add" onclick="openModal(\'addReward\')">＋ Ajouter</button>' : '') +
-    '</div>' +
-    '<div class="shop-who">'+c.emoji+' '+c.name+' achète<span class="amt">'+fmt(c.balance)+'$</span></div>';
-  if (S.rewards.length === 0) return out + empty('🛍️','Boutique vide','');
-  out += '<div class="shop-grid">';
-  for (var i = 0; i < S.rewards.length; i++) {
-    var r = S.rewards[i], ok = c.balance >= r.cost, locked = !ok && !pm;
-    out += '<div class="reward-card'+(locked?' locked':'')+'" onclick="'+((!locked)?'buyReward(\''+r.id+'\')':'')+'" style="position:relative">' +
-      (pm ? '<button class="btn-del" style="position:absolute;top:8px;right:8px" onclick="event.stopPropagation();delReward(\''+r.id+'\')">🗑</button>' : '') +
-      '<span class="rc-ico">'+(r.icon||'🎁')+'</span>' +
-      '<div class="rc-name">'+r.title+'</div>' +
-      '<div class="rc-cost">'+fmt(r.cost)+'$</div>' +
-      (locked ? '<div class="rc-miss">Manque '+fmt(r.cost-c.balance)+'$</div>' : '') +
-      '</div>';
-  }
-  return out + '</div>';
-}
-
-// ── Stats ────────────────────────────────────────────────────
-function stats() {
-  var k = S.children.kaylie, l = S.children.leo;
-  var ke = totalEarned('kaylie'), le = totalEarned('leo');
-  var kt = 0, lt = 0, ksp = 0, lsp = 0;
-  for (var i = 0; i < S.history.length; i++) {
-    var h = S.history[i];
-    if (h.cid==='kaylie'&&h.type==='earn') kt++;
-    if (h.cid==='leo'   &&h.type==='earn') lt++;
-    if (h.cid==='kaylie'&&h.type==='spend') ksp+=h.amount;
-    if (h.cid==='leo'   &&h.type==='spend') lsp+=h.amount;
-  }
-  function row(lbl, kv, lv, money) {
-    var ks = money!==false ? fmt(kv) : String(kv);
-    var ls = money!==false ? fmt(lv) : String(lv);
-    return '<div class="stat-row">' +
-      '<div class="stat-lbl">'+lbl+'</div>' +
-      '<div class="cmp-bar"><div class="cmp-k" style="flex:'+kv+'"></div><div class="cmp-l" style="flex:'+lv+'"></div></div>' +
-      '<div class="stat-vals"><span style="color:var(--p1)">'+ks+'</span><span style="color:var(--muted)"> · </span><span style="color:var(--p2)">'+ls+'</span></div>' +
-      '</div>';
-  }
-  function lvCard(pid) {
-    var c = S.children[pid], info = lvlOf(pid), te = totalEarned(pid);
-    var col = pid==='kaylie'?'var(--p1)':'var(--p2)';
-    return '<div class="mission-card" style="margin-bottom:10px">' +
-      '<div class="mc-top"><div class="mc-icon" style="font-size:28px">'+c.emoji+'</div>' +
-      '<div class="mc-info"><div class="mc-name">'+c.name+'</div><div class="mc-meta">'+fmt(te)+'$ gagnés au total</div></div>' +
-      '<div class="mc-value" style="color:'+col+'">NIV.'+info.lvl+'</div></div>' +
-      '<div class="lv-bar-wrap"><div class="lv-bar-fill" style="width:'+Math.round(info.pct*100)+'%;background:'+col+'"></div></div>' +
-      '<div style="display:flex;justify-content:space-between;font-family:\'Rajdhani\',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">' +
-        '<span>'+fmt(te%15)+'$ / 15$ → niv.'+(info.lvl+1)+'</span><span>'+Math.round(info.pct*100)+'%</span></div></div>';
-  }
-  return '<div class="sec-hd"><div class="sec-title">Statistiques</div></div>' +
-    '<div style="display:flex;justify-content:space-between;margin-bottom:10px">' +
-      '<span style="font-family:\'Rajdhani\',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--p1)">🦋 '+k.name+'</span>' +
-      '<span style="font-family:\'Rajdhani\',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--p2)">'+l.name+' 🦁</span>' +
-    '</div>' +
-    row('Solde', k.balance, l.balance) + row('Gagné', ke, le) +
-    row('Missions', kt, lt, false) + row('Dépensé', ksp, lsp) +
-    '<div class="slbl" style="margin-top:20px">Progression</div>' +
-    lvCard('kaylie') + lvCard('leo');
-}
-
-// ── History ──────────────────────────────────────────────────
-function history() {
-  var out = '<div class="sec-hd"><div class="sec-title">Journal</div>' +
-    (pm ? '<button class="btn-add" onclick="openModal(\'adjust\')">✎ Ajuster</button>' : '') + '</div>';
-  var items = S.history.slice().reverse().slice(0, 80);
-  if (items.length === 0) return out + empty('📋','Aucune entrée','');
-  for (var i = 0; i < items.length; i++) {
-    var h = items[i], c = S.children[h.cid], earn = h.type==='earn';
-    var ds = new Date(h.date).toLocaleDateString('fr-CA',{day:'numeric',month:'short'});
-    out += '<div class="hist-item">' +
-      '<div class="hi-ico '+h.type+'">'+(earn?'💰':'🛍️')+'</div>' +
-      '<div class="hi-info"><div class="hi-desc">'+h.desc+'</div>' +
-        '<div class="hi-meta">'+c.emoji+' '+c.name+' · '+ds+'</div></div>' +
-      '<div class="hi-amt '+h.type+'">'+(earn?'+':'-')+fmt(h.amount)+'$</div></div>';
-  }
-  return out;
-}
-
-function empty(ico, t, s) {
-  return '<div class="empty"><div class="empty-ico">'+ico+'</div><div class="empty-txt">'+t+'</div><div class="empty-sub">'+s+'</div></div>';
-}
-
-// ── Modals ───────────────────────────────────────────────────
-var TEMOS = ['🛏️','🍽️','📚','🗑️','🥗','🐾','🏠','🧹','🛁','🌱','🚗','💪','🎯','⭐','🎨','🎵','🏃','🤝','🧺','🥛','🍎','✏️','🧸','🎪'];
-var REMOS = ['📱','🍕','🎬','🌙','🎡','🍦','🎮','🎁','🚀','⚽','🎨','🎵','🏖️','🍫','🛒','🎠','🪁','🧁','🎿','🤿'];
-
-function overlay() { return '<div class="overlay" onclick="overlayClick(event)">'+modalContent()+'</div>'; }
-function modalContent() {
-  if (modal.type==='pin')       return pinModal();
-  if (modal.type==='addTask')   return addTaskModal();
-  if (modal.type==='addReward') return addRewardModal();
-  if (modal.type==='adjust')    return adjustModal();
-  return '';
-}
-function pinModal() {
-  return '<div class="modal" onclick="event.stopPropagation()">' +
-    '<div class="m-handle"></div><div class="m-title">🔑 Accès Admin</div>' +
-    '<div class="pin-hint">NIP par défaut : <strong>1234</strong></div>' +
-    '<div class="pin-row">' +
-      '<input class="pin-d" id="pd0" type="tel" maxlength="1" autocomplete="off" placeholder="·">' +
-      '<input class="pin-d" id="pd1" type="tel" maxlength="1" autocomplete="off" placeholder="·">' +
-      '<input class="pin-d" id="pd2" type="tel" maxlength="1" autocomplete="off" placeholder="·">' +
-      '<input class="pin-d" id="pd3" type="tel" maxlength="1" autocomplete="off" placeholder="·">' +
-    '</div>' +
-    '<div class="pin-err" id="pin-err"></div>' +
-    '<button class="btn-s" onclick="closeModal()">Annuler</button></div>';
-}
-function emojiGrid(list, sel) {
-  var out = '<div class="eg">';
-  for (var i = 0; i < list.length; i++) {
-    out += '<div class="eb" onclick="pickEmoji(\''+list[i]+'\')"><div class="eb-inner'+(sel===list[i]?' sel':'')+'">' + list[i] + '</div></div>';
-  }
-  return out + '</div>';
-}
-function addTaskModal() {
-  var sel = modal.emoji||'📌';
-  return '<div class="modal" onclick="event.stopPropagation()">' +
-    '<div class="m-handle"></div><div class="m-title">Nouvelle Mission</div>' +
-    '<div class="fg"><label class="fl">Icône</label>' + emojiGrid(TEMOS, sel) + '</div>' +
-    '<div class="fg"><label class="fl">Nom</label><input class="fi" id="tt" type="text" placeholder="ex : Ranger sa chambre" value="'+(modal.title||'')+'"></div>' +
-    '<div class="fg"><label class="fl">Récompense ($)</label><input class="fi" id="tv" type="number" step="0.5" min="0.5" placeholder="2.00" value="'+(modal.val||'')+'"></div>' +
-    '<div class="fg"><label class="fl">Assignée à</label>' +
-      '<select class="fi" id="ta">' +
-        '<option value="both"'  +((!modal.assign||modal.assign==='both')  ?' selected':'')+'>Tous les deux</option>' +
-        '<option value="kaylie"'+(modal.assign==='kaylie'?' selected':'')+'>Kaylie</option>' +
-        '<option value="leo"'   +(modal.assign==='leo'   ?' selected':'')+'>Léo</option>' +
-      '</select></div>' +
-    '<button class="btn-p" onclick="saveTask()">Ajouter</button>' +
-    '<button class="btn-s" onclick="closeModal()">Annuler</button></div>';
-}
-function addRewardModal() {
-  var sel = modal.emoji||'🎁';
-  return '<div class="modal" onclick="event.stopPropagation()">' +
-    '<div class="m-handle"></div><div class="m-title">Nouvelle Récompense</div>' +
-    '<div class="fg"><label class="fl">Icône</label>' + emojiGrid(REMOS, sel) + '</div>' +
-    '<div class="fg"><label class="fl">Nom</label><input class="fi" id="rt" type="text" placeholder="ex : Soirée film" value="'+(modal.title||'')+'"></div>' +
-    '<div class="fg"><label class="fl">Coût ($)</label><input class="fi" id="rc" type="number" step="0.5" min="0.5" placeholder="15.00" value="'+(modal.cost||'')+'"></div>' +
-    '<button class="btn-p" onclick="saveReward()">Ajouter</button>' +
-    '<button class="btn-s" onclick="closeModal()">Annuler</button></div>';
-}
-function adjustModal() {
-  return '<div class="modal" onclick="event.stopPropagation()">' +
-    '<div class="m-handle"></div><div class="m-title">✎ Ajuster</div>' +
-    '<div class="fg"><label class="fl">Joueur</label>' +
-      '<select class="fi" id="ac">' +
-        '<option value="kaylie">🦋 Kaylie ('+fmt(S.children.kaylie.balance)+'$)</option>' +
-        '<option value="leo">🦁 Léo ('+fmt(S.children.leo.balance)+'$)</option>' +
-      '</select></div>' +
-    '<div class="fg"><label class="fl">Montant ($)</label><input class="fi" id="am" type="number" step="0.5" min="0.5" placeholder="5.00"></div>' +
-    '<div class="fg"><label class="fl">Type</label>' +
-      '<select class="fi" id="at"><option value="earn">Ajouter</option><option value="spend">Retirer</option></select></div>' +
-    '<div class="fg"><label class="fl">Raison</label><input class="fi" id="ar" type="text" placeholder="Bonus de bonne conduite"></div>' +
-    '<button class="btn-p" onclick="saveAdjust()">Confirmer</button>' +
-    '<button class="btn-s" onclick="closeModal()">Annuler</button></div>';
-}
-
-// ── Actions ──────────────────────────────────────────────────
-function setShopFor(p) { shopFor = p; render(); }
-function setTab(t)     { tab = t; filter = 'all'; render(); }
-function setFilter(f)  { filter = f; render(); }
-function openModal(t)  { modal = {type: t}; render(); }
-function closeModal()  { modal = null; render(); }
-function overlayClick(e) { if (e.target.className === 'overlay') closeModal(); }
-function pickEmoji(e)  { modal.emoji = e; render(); }
-
-function clickLock() {
-  if (pm) { pm = false; render(); toast('MODE ADMIN DÉSACTIVÉ'); }
-  else { modal = {type:'pin'}; render(); setTimeout(function() { var el=$('pd0'); if(el) el.focus(); }, 80); }
-}
-
-function findTask(tid) {
-  for (var i = 0; i < S.tasks.length; i++) { if (S.tasks[i].id === tid) return S.tasks[i]; }
-  return null;
-}
-function findReward(rid) {
-  for (var i = 0; i < S.rewards.length; i++) { if (S.rewards[i].id === rid) return S.rewards[i]; }
-  return null;
-}
-
-function markDone(tid, pid) {
-  var t = findTask(tid); if (!t) return;
-  if (!t.done) t.done = {};
-  if (t.done[pid] === 'pending') return;
-  t.done[pid] = 'pending';
-  save(); toast("⏳ EN ATTENTE D'APPROBATION");
-}
-
-function approveTask(tid, pid, ev) {
-  var t = findTask(tid); if (!t) return;
-  var c = S.children[pid];
-  c.balance = Math.round((c.balance + t.value) * 100) / 100;
-  t.done[pid] = null;
-  S.history.push({id:uid(), cid:pid, type:'earn', amount:t.value, desc:'Mission : '+t.title, date:new Date().toISOString()});
-  save();
-  var rect = ev.target.getBoundingClientRect();
-  coins(rect.left + rect.width/2, rect.top, 7);
-  toast('💰 +'+fmt(t.value)+'$ POUR '+c.name.toUpperCase()+' !');
-}
-
-function rejectTask(tid, pid) {
-  var t = findTask(tid); if (!t || !t.done) return;
-  t.done[pid] = null; save(); toast('MISSION REFUSÉE');
-}
-
-function buyReward(rid) {
-  if (pm) return;
-  var r = findReward(rid); if (!r) return;
-  var c = S.children[shopFor];
-  if (c.balance < r.cost) return;
-  c.balance = Math.round((c.balance - r.cost) * 100) / 100;
-  S.history.push({id:uid(), cid:shopFor, type:'spend', amount:r.cost, desc:'Récompense : '+r.title, date:new Date().toISOString()});
-  save(); toast('🎉 '+r.title.toUpperCase()+' DÉBLOQUÉ !');
-}
-
-function delTask(tid) {
-  var arr = [];
-  for (var i = 0; i < S.tasks.length; i++) { if (S.tasks[i].id !== tid) arr.push(S.tasks[i]); }
-  S.tasks = arr; save();
-}
-function delReward(rid) {
-  var arr = [];
-  for (var i = 0; i < S.rewards.length; i++) { if (S.rewards[i].id !== rid) arr.push(S.rewards[i]); }
-  S.rewards = arr; save();
-}
-
-function getVal(id) { var el = $(id); return el ? el.value : ''; }
-
-function saveTask() {
-  var title = getVal('tt').replace(/^\s+|\s+$/g,'');
-  var val = parseFloat(getVal('tv'));
-  var assign = getVal('ta') || 'both';
-  if (!title) { toast('⚠ ENTREZ UN NOM'); return; }
-  if (!val||val<=0) { toast('⚠ MONTANT INVALIDE'); return; }
-  S.tasks.push({id:uid(), title:title, value:val, assign:assign, icon:modal.emoji||'📌', done:{}});
-  save(); closeModal(); toast('✅ MISSION AJOUTÉE');
-}
-
-function saveReward() {
-  var title = getVal('rt').replace(/^\s+|\s+$/g,'');
-  var cost = parseFloat(getVal('rc'));
-  if (!title) { toast('⚠ ENTREZ UN NOM'); return; }
-  if (!cost||cost<=0) { toast('⚠ MONTANT INVALIDE'); return; }
-  S.rewards.push({id:uid(), title:title, cost:cost, icon:modal.emoji||'🎁'});
-  save(); closeModal(); toast('🛍️ RÉCOMPENSE AJOUTÉE');
-}
-
-function saveAdjust() {
-  var cid=getVal('ac'), amount=parseFloat(getVal('am')), type=getVal('at');
-  var desc=getVal('ar').replace(/^\s+|\s+$/g,'')||'Ajustement';
-  if (!amount||amount<=0) { toast('⚠ MONTANT INVALIDE'); return; }
-  var c = S.children[cid];
-  if (type==='earn') c.balance=Math.round((c.balance+amount)*100)/100;
-  else               c.balance=Math.max(0,Math.round((c.balance-amount)*100)/100);
-  S.history.push({id:uid(), cid:cid, type:type, amount:amount, desc:desc, date:new Date().toISOString()});
-  save(); closeModal(); toast('✅ SOLDE AJUSTÉ');
-}
-
-// ── PIN ──────────────────────────────────────────────────────
-function bind() {
-  for (var i = 0; i < 4; i++) {
-    (function(idx) {
-      var el = $('pd'+idx); if (!el) return;
-      el.addEventListener('input', function() {
-        var v = this.value.replace(/\D/g,''); this.value = v.slice(-1);
-        if (this.value && idx<3) { var n=$('pd'+(idx+1)); if(n) n.focus(); }
-        var ok=true;
-        for (var j=0;j<4;j++){var d=$('pd'+j);if(!d||d.value.length!==1){ok=false;break;}}
-        if (ok) checkPin();
-      });
-      el.addEventListener('keydown', function(e) {
-        if (e.keyCode===8 && !this.value && idx>0) { var p=$('pd'+(idx-1)); if(p) p.focus(); }
-      });
-    })(i);
-  }
-}
-
-function checkPin() {
-  var pin='';
-  for (var i=0;i<4;i++){var d=$('pd'+i);pin+=d?(d.value||''):'';}
-  if (pin===(S.pin||'1234')) { pm=true; closeModal(); toast('🔓 ACCÈS ADMIN ACTIVÉ'); }
-  else {
-    var e=$('pin-err'); if(e) e.textContent='NIP INCORRECT';
-    for (var j=0;j<4;j++){var d2=$('pd'+j);if(d2) d2.value='';}
-    var f=$('pd0'); if(f) f.focus();
-  }
-}
-
-// ── Firebase sync ─────────────────────────────────────────────
-// Surveiller la connexion → mettre à jour le point vert/orange
-DB.ref('.info/connected').on('value', function(snap) {
-  online = snap.val() === true;
-  if (S) render();
-});
-
-// Écoute principale — se déclenche au chargement ET à chaque modification sur n'importe quel appareil
-REF.on('value', function(snapshot) {
-  var data = snapshot.val();
-  if (data) {
-    S = normalizeState(data);
-    render();
-  } else {
-    // Première utilisation : afficher l'app de suite, puis écrire les défauts
-    S = deepCopy(DEFAULTS);
-    render();
-    REF.set(S).catch(function(err) {
-      console.error('Erreur Firebase init:', err);
-      toast('⚠ ERREUR INIT — vérifier les règles Firebase');
-    });
-  }
-}, function(err) {
-  // Erreur de lecture (règles de sécurité, pas de connexion, etc.)
-  console.error('Erreur Firebase read:', err);
-  $('app').innerHTML =
-    '<div class="loading-screen">' +
-    '<div style="font-size:32px;margin-bottom:12px">⚠️</div>' +
-    '<div class="loading-txt" style="color:var(--red)">Erreur de connexion</div>' +
-    '<div style="font-family:\'Rajdhani\',sans-serif;font-size:12px;color:var(--sub);margin-top:8px;text-align:center;padding:0 20px">' +
-      err.message + '<br><br>Vérifie les règles Firebase :<br>"+.read": true, "+.write": true' +
-    '</div>' +
-    '</div>';
-});
+function save(){if(!S)return;REF.set(S).catch(function(err){console.error('Firebase:',err);toast('⚠ ERREUR SYNC');});}
+function getDone(task,pid){if(!task.done)return null;return task.done[pid]||null;}
+function totalEarned(cid){var t=0;for(var i=0;i<S.history.length;i++){if(S.history[i].cid===cid&&S.history[i].type==='earn')t+=S.history[i].amount;}return t;}
+function lvlOf(cid){var te=totalEarned(cid);return{lvl:Math.floor(te/15)+1,pct:(te%15)/15};}
+function pendingFor(cid){var c=0;for(var i=0;i<S.tasks.length;i++){var t=S.tasks[i];if((t.assign==='both'||t.assign===cid)&&getDone(t,cid)==='pending')c++;}return c;}
+function hasPending(task){return getDone(task,'kaylie')==='pending'||getDone(task,'leo')==='pending';}
+function toast(msg){var el=document.createElement('div');el.className='toast';el.textContent=msg;document.body.appendChild(el);setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},3100);}
+function coins(x,y,n){n=n||6;for(var i=0;i<n;i++){(function(d){var el=document.createElement('div');el.className='coin';el.textContent='💰';el.style.cssText='left:'+(x+(Math.random()-.5)*60)+'px;top:'+y+'px;animation-delay:'+d+'s';document.body.appendChild(el);setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el);},1200);})(i*0.06);}}
+function render(){if(!S)return;$('app').innerHTML=hdr()+(pm?'<div class="admin-banner">🔓 MODE ADMIN ACTIVÉ</div>':'')+scoreboard()+'<div class="content">'+content()+'</div>'+nav()+(modal?overlay():'');bind();}
+function syncDot(){return'<span class="sync-dot '+(online?'ok':'off')+'" title="'+(online?'En ligne':'Hors ligne')+'"></span>';}
+function hdr(){return'<div class="hdr"><div class="hdr-logo"><div class="hdr-logo-icon">⚡</div><div class="hdr-title"><span>Missions</span> Familiales'+syncDot()+'</div></div><div class="hdr-right"><button class="btn-lock'+(pm?' on':'')+'" onclick="clickLock()">'+(pm?'🔓':'🔑')+'</button></div></div>';}
+function scoreboard(){var kb=S.children.kaylie.balance,lb=S.children.leo.balance;return'<div class="scoreboard">'+playerCard('kaylie',kb>lb)+'<div class="vs">VS</div>'+playerCard('leo',lb>kb)+'</div>';}
+function playerCard(pid,lead){var c=S.children[pid],info=lvlOf(pid),pend=pendingFor(pid),col=pid==='kaylie'?'var(--p1)':'var(--p2)';return'<div class="player-card'+(shopFor===pid?' active':'')+'" data-pid="'+pid+'" onclick="setShopFor(\''+pid+'\')">'+(lead?'<div class="pc-leader">👑</div>':'')+'<span class="pc-emoji">'+c.emoji+'</span><div class="pc-name">'+c.name+'</div><div class="pc-balance">'+fmt(c.balance)+'<span class="u">$</span></div><div class="pc-level"><span class="pc-lvl" style="color:'+col+'">Niv.'+info.lvl+'</span><div class="pc-bar"><div class="pc-bar-fill" style="width:'+Math.round(info.pct*100)+'%;background:'+col+'"></div></div></div>'+(pend>0?'<div class="pc-pending"><span class="dot"></span>'+pend+' en attente</div>':'')+'</div>';}
+function nav(){var tabs=[['missions','🎯','Missions'],['shop','🛍️','Boutique'],['stats','📊','Stats'],['history','📋','Journal']],out='<nav class="nav">';for(var i=0;i<tabs.length;i++)out+='<button class="nav-btn'+(tab===tabs[i][0]?' on':'')+'" onclick="setTab(\''+tabs[i][0]+'\')"><span class="ni">'+tabs[i][1]+'</span>'+tabs[i][2]+'</button>';return out+'</nav>';}
+function content(){if(tab==='missions')return missions();if(tab==='shop')return shop();if(tab==='stats')return stats();if(tab==='history')return history();return'';}
+function missions(){if(pm)return missionsAdmin();var tasks=[],i,t;for(i=0;i<S.tasks.length;i++){t=S.tasks[i];if(filter==='pending'&&!hasPending(t))continue;if(filter==='available'){var kd=getDone(t,'kaylie'),ld=getDone(t,'leo'),kv=t.assign==='both'||t.assign==='kaylie',lv=t.assign==='both'||t.assign==='leo';if((kv&&kd)||(lv&&ld))continue;}tasks.push(t);}var out='<div class="sec-hd"><div class="sec-title">Missions</div></div><div class="chips">'+chip('all','Toutes')+chip('available','Disponibles')+chip('pending','En attente')+'</div>';if(tasks.length===0)return out+empty('🎯','Aucune mission','');for(i=0;i<tasks.length;i++)out+=missionCard(tasks[i]);return out;}
+function chip(v,l){return'<div class="chip'+(filter===v?' on':'')+'" onclick="setFilter(\''+v+'\')">'+l+'</div>';}
+function missionCard(t){return'<div class="mission-card'+(hasPending(t)?' has-pending':'')+'"><div class="mc-top"><div class="mc-icon">'+(t.icon||'📌')+'</div><div class="mc-info"><div class="mc-name">'+t.title+'</div><div class="mc-meta">'+(t.assign==='both'?'Tous les deux':(S.children[t.assign]?S.children[t.assign].name:t.assign))+'</div></div><div class="mc-value">+'+fmt(t.value)+'$</div></div><div class="duo-row">'+playerAction(t,'kaylie')+playerAction(t,'leo')+'</div></div>';}
+function playerAction(t,pid){var c=S.children[pid],vis=t.assign==='both'||t.assign===pid,st=getDone(t,pid);if(!vis)return'<div class="pa st-disabled"><div class="pa-l"><span>'+c.emoji+'</span><span>'+c.name+'</span></div><span>—</span></div>';if(st==='pending')return'<div class="pa st-pending"><div class="pa-l"><span>'+c.emoji+'</span><span>'+c.name+'</span></div><span>⏳</span></div>';return'<div class="pa" onclick="markDone(\''+t.id+'\',\''+pid+'\')"><div class="pa-l"><span>'+c.emoji+'</span><span>'+c.name+'</span></div><span>▶</span></div>';}
+function missionsAdmin(){var pend=[],i;for(i=0;i<S.tasks.length;i++){if(hasPending(S.tasks[i]))pend.push(S.tasks[i]);}var out='<div class="sec-hd"><div class="sec-title">Missions</div><button class="btn-add" onclick="openModal(\'addTask\')">＋ Ajouter</button></div>';if(pend.length>0){out+='<div class="slbl orange">⚡ En attente d\'approbation</div>';for(i=0;i<pend.length;i++)out+=approveCard(pend[i]);}out+='<div class="slbl">Toutes les missions</div>';if(S.tasks.length===0)return out+empty('🎯','Aucune mission','');for(i=0;i<S.tasks.length;i++)out+=manageCard(S.tasks[i]);return out;}
+function approveCard(t){var out='',pids=['kaylie','leo'];for(var i=0;i<pids.length;i++){var pid=pids[i];if(getDone(t,pid)!=='pending')continue;var c=S.children[pid];out+='<div class="mission-card has-pending"><div class="mc-top"><div class="mc-icon">'+(t.icon||'📌')+'</div><div class="mc-info"><div class="mc-name">'+t.title+'</div><div class="mc-meta">'+c.emoji+' '+c.name+'</div></div><div class="mc-value">+'+fmt(t.value)+'$</div></div><div class="duo-row"><div class="pa st-reject" onclick="rejectTask(\''+t.id+'\',\''+pid+'\')"><div class="pa-l"><span>✕</span><span>Refuser</span></div></div><div class="pa st-approve" onclick="approveTask(\''+t.id+'\',\''+pid+'\',event)"><div class="pa-l"><span>✓</span><span>Approuver</span></div><span style="font-family:\'Orbitron\',monospace;font-size:10px">+'+fmt(t.value)+'$</span></div></div></div>';}return out;}
+function manageCard(t){var a=t.assign==='both'?'Tous les deux':(S.children[t.assign]?S.children[t.assign].name:t.assign);return'<div class="manage-card"><span class="mgico">'+(t.icon||'📌')+'</span><div class="mginfo"><div class="mgname">'+t.title+'</div><div class="mgmeta">'+a+'</div></div><div class="mgval">'+fmt(t.value)+'$</div><button class="btn-del" onclick="delTask(\''+t.id+'\')">🗑</button></div>';}
+function shop(){var c=S.children[shopFor],out='<div class="sec-hd"><div class="sec-title">Boutique</div>'+(pm?'<button class="btn-add" onclick="openModal(\'addReward\')">＋ Ajouter</button>':'')+'</div><div class="shop-who">'+c.emoji+' '+c.name+' achète<span class="amt">'+fmt(c.balance)+'$</span></div>';if(S.rewards.length===0)return out+empty('🛍️','Boutique vide','');out+='<div class="shop-grid">';for(var i=0;i<S.rewards.length;i++){var r=S.rewards[i],ok=c.balance>=r.cost,locked=!ok&&!pm;out+='<div class="reward-card'+(locked?' locked':'')+'" onclick="'+((!locked)?'buyReward(\''+r.id+'\')':'')+'" style="position:relative">'+(pm?'<button class="btn-del" style="position:absolute;top:8px;right:8px" onclick="event.stopPropagation();delReward(\''+r.id+'\')">🗑</button>':'')+'<span class="rc-ico">'+(r.icon||'🎁')+'</span><div class="rc-name">'+r.title+'</div><div class="rc-cost">'+fmt(r.cost)+'$</div>'+(locked?'<div class="rc-miss">Manque '+fmt(r.cost-c.balance)+'$</div>':'')+'</div>';}return out+'</div>';}
+function stats(){var k=S.children.kaylie,l=S.children.leo,ke=totalEarned('kaylie'),le=totalEarned('leo'),kt=0,lt=0,ksp=0,lsp=0;for(var i=0;i<S.history.length;i++){var h=S.history[i];if(h.cid==='kaylie'&&h.type==='earn')kt++;if(h.cid==='leo'&&h.type==='earn')lt++;if(h.cid==='kaylie'&&h.type==='spend')ksp+=h.amount;if(h.cid==='leo'&&h.type==='spend')lsp+=h.amount;}
+function row(lbl,kv,lv,money){var ks=money!==false?fmt(kv):String(kv),ls=money!==false?fmt(lv):String(lv);return'<div class="stat-row"><div class="stat-lbl">'+lbl+'</div><div class="cmp-bar"><div class="cmp-k" style="flex:'+kv+'"></div><div class="cmp-l" style="flex:'+lv+'"></div></div><div class="stat-vals"><span style="color:var(--p1)">'+ks+'</span><span style="color:var(--muted)"> · </span><span style="color:var(--p2)">'+ls+'</span></div></div>';}
+function lvCard(pid){var c=S.children[pid],info=lvlOf(pid),te=totalEarned(pid),col=pid==='kaylie'?'var(--p1)':'var(--p2)';return'<div class="mission-card" style="margin-bottom:10px"><div class="mc-top"><div class="mc-icon" style="font-size:28px">'+c.emoji+'</div><div class="mc-info"><div class="mc-name">'+c.name+'</div><div class="mc-meta">'+fmt(te)+'$ gagnés au total</div></div><div class="mc-value" style="color:'+col+'">NIV.'+info.lvl+'</div></div><div class="lv-bar-wrap"><div class="lv-bar-fill" style="width:'+Math.round(info.pct*100)+'%;background:'+col+'"></div></div><div style="display:flex;justify-content:space-between;font-family:\'Rajdhani\',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)"><span>'+fmt(te%15)+'$ / 15$ → niv.'+(info.lvl+1)+'</span><span>'+Math.round(info.pct*100)+'%</span></div></div>';}
+return'<div class="sec-hd"><div class="sec-title">Statistiques</div></div><div style="display:flex;justify-content:space-between;margin-bottom:10px"><span style="font-family:\'Rajdhani\',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--p1)">🦋 '+k.name+'</span><span style="font-family:\'Rajdhani\',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--p2)">'+l.name+' 🦁</span></div>'+row('Solde',k.balance,l.balance)+row('Gagné',ke,le)+row('Missions',kt,lt,false)+row('Dépensé',ksp,lsp)+'<div class="slbl" style="margin-top:20px">Progression</div>'+lvCard('kaylie')+lvCard('leo');}
+function history(){var out='<div class="sec-hd"><div class="sec-title">Journal</div>'+(pm?'<button class="btn-add" onclick="openModal(\'adjust\')">✎ Ajuster</button>':'')+'</div>';var items=S.history.slice().reverse().slice(0,80);if(items.length===0)return out+empty('📋','Aucune entrée','');for(var i=0;i<items.length;i++){var h=items[i],c=S.children[h.cid],earn=h.type==='earn',ds=new Date(h.date).toLocaleDateString('fr-CA',{day:'numeric',month:'short'});out+='<div class="hist-item"><div class="hi-ico '+h.type+'">'+(earn?'💰':'🛍️')+'</div><div class="hi-info"><div class="hi-desc">'+h.desc+'</div><div class="hi-meta">'+c.emoji+' '+c.name+' · '+ds+'</div></div><div class="hi-amt '+h.type+'">'+(earn?'+':'-')+fmt(h.amount)+'$</div></div>';}return out;}
+function empty(ico,t,s){return'<div class="empty"><div class="empty-ico">'+ico+'</div><div class="empty-txt">'+t+'</div><div class="empty-sub">'+s+'</div></div>';}
+var TEMOS=['🛏️','🍽️','📚','🗑️','🥗','🐾','🏠','🧹','🛁','🌱','🚗','💪','🎯','⭐','🎨','🎵','🏃','🤝','🧺','🥛','🍎','✏️','🧸','🎪'];
+var REMOS=['📱','🍕','🎬','🌙','🎡','🍦','🎮','🎁','🚀','⚽','🎨','🎵','🏖️','🍫','🛒','🎠','🪁','🧁','🎿','🤿'];
+function overlay(){return'<div class="overlay" onclick="overlayClick(event)">'+modalContent()+'</div>';}
+function modalContent(){if(modal.type==='pin')return pinModal();if(modal.type==='addTask')return addTaskModal();if(modal.type==='addReward')return addRewardModal();if(modal.type==='adjust')return adjustModal();return'';}
+function pinModal(){return'<div class="modal" onclick="event.stopPropagation()"><div class="m-handle"></div><div class="m-title">🔑 Accès Admin</div><div class="pin-hint">NIP par défaut : <strong>1234</strong></div><div class="pin-row"><input class="pin-d" id="pd0" type="tel" maxlength="1" autocomplete="off" placeholder="·"><input class="pin-d" id="pd1" type="tel" maxlength="1" autocomplete="off" placeholder="·"><input class="pin-d" id="pd2" type="tel" maxlength="1" autocomplete="off" placeholder="·"><input class="pin-d" id="pd3" type="tel" maxlength="1" autocomplete="off" placeholder="·"></div><div class="pin-err" id="pin-err"></div><button class="btn-s" onclick="closeModal()">Annuler</button></div>';}
+function emojiGrid(list,sel){var out='<div class="eg">';for(var i=0;i<list.length;i++)out+='<div class="eb" onclick="pickEmoji(\''+list[i]+'\')"><div class="eb-inner'+(sel===list[i]?' sel':'')+'">'+list[i]+'</div></div>';return out+'</div>';}
+function addTaskModal(){var sel=modal.emoji||'📌';return'<div class="modal" onclick="event.stopPropagation()"><div class="m-handle"></div><div class="m-title">Nouvelle Mission</div><div class="fg"><label class="fl">Icône</label>'+emojiGrid(TEMOS,sel)+'</div><div class="fg"><label class="fl">Nom</label><input class="fi" id="tt" type="text" placeholder="ex : Ranger sa chambre" value="'+(modal.title||'')+'"></div><div class="fg"><label class="fl">Récompense ($)</label><input class="fi" id="tv" type="number" step="0.5" min="0.5" placeholder="2.00" value="'+(modal.val||'')+'"></div><div class="fg"><label class="fl">Assignée à</label><select class="fi" id="ta"><option value="both"'+((!modal.assign||modal.assign==="both")?" selected":"")+'>Tous les deux</option><option value="kaylie"'+(modal.assign==="kaylie"?" selected":"")+'>Kaylie</option><option value="leo"'+(modal.assign==="leo"?" selected":"")+'>Léo</option></select></div><button class="btn-p" onclick="saveTask()">Ajouter</button><button class="btn-s" onclick="closeModal()">Annuler</button></div>';}
+function addRewardModal(){var sel=modal.emoji||'🎁';return'<div class="modal" onclick="event.stopPropagation()"><div class="m-handle"></div><div class="m-title">Nouvelle Récompense</div><div class="fg"><label class="fl">Icône</label>'+emojiGrid(REMOS,sel)+'</div><div class="fg"><label class="fl">Nom</label><input class="fi" id="rt" type="text" placeholder="ex : Soirée film" value="'+(modal.title||'')+'"></div><div class="fg"><label class="fl">Coût ($)</label><input class="fi" id="rc" type="number" step="0.5" min="0.5" placeholder="15.00" value="'+(modal.cost||'')+'"></div><button class="btn-p" onclick="saveReward()">Ajouter</button><button class="btn-s" onclick="closeModal()">Annuler</button></div>';}
+function adjustModal(){return'<div class="modal" onclick="event.stopPropagation()"><div class="m-handle"></div><div class="m-title">✎ Ajuster</div><div class="fg"><label class="fl">Joueur</label><select class="fi" id="ac"><option value="kaylie">🦋 Kaylie ('+fmt(S.children.kaylie.balance)+'$)</option><option value="leo">🦁 Léo ('+fmt(S.children.leo.balance)+'$)</option></select></div><div class="fg"><label class="fl">Montant ($)</label><input class="fi" id="am" type="number" step="0.5" min="0.5" placeholder="5.00"></div><div class="fg"><label class="fl">Type</label><select class="fi" id="at"><option value="earn">Ajouter</option><option value="spend">Retirer</option></select></div><div class="fg"><label class="fl">Raison</label><input class="fi" id="ar" type="text" placeholder="Bonus de bonne conduite"></div><button class="btn-p" onclick="saveAdjust()">Confirmer</button><button class="btn-s" onclick="closeModal()">Annuler</button></div>';}
+function setShopFor(p){shopFor=p;render();}function setTab(t){tab=t;filter='all';render();}function setFilter(f){filter=f;render();}function openModal(t){modal={type:t};render();}function closeModal(){modal=null;render();}function overlayClick(e){if(e.target.className==='overlay')closeModal();}function pickEmoji(e){modal.emoji=e;render();}
+function clickLock(){if(pm){pm=false;render();toast('MODE ADMIN DÉSACTIVÉ');}else{modal={type:'pin'};render();setTimeout(function(){var el=$('pd0');if(el)el.focus();},80);}}
+function findTask(tid){for(var i=0;i<S.tasks.length;i++){if(S.tasks[i].id===tid)return S.tasks[i];}return null;}
+function findReward(rid){for(var i=0;i<S.rewards.length;i++){if(S.rewards[i].id===rid)return S.rewards[i];}return null;}
+function markDone(tid,pid){var t=findTask(tid);if(!t)return;if(!t.done)t.done={};if(t.done[pid]==='pending')return;t.done[pid]='pending';save();toast("⏳ EN ATTENTE D'APPROBATION");}
+function approveTask(tid,pid,ev){var t=findTask(tid);if(!t)return;var c=S.children[pid];c.balance=Math.round((c.balance+t.value)*100)/100;t.done[pid]=null;S.history.push({id:uid(),cid:pid,type:'earn',amount:t.value,desc:'Mission : '+t.title,date:new Date().toISOString()});save();var rect=ev.target.getBoundingClientRect();coins(rect.left+rect.width/2,rect.top,7);toast('💰 +'+fmt(t.value)+'$ POUR '+c.name.toUpperCase()+' !');}
+function rejectTask(tid,pid){var t=findTask(tid);if(!t||!t.done)return;t.done[pid]=null;save();toast('MISSION REFUSÉE');}
+function buyReward(rid){if(pm)return;var r=findReward(rid);if(!r)return;var c=S.children[shopFor];if(c.balance<r.cost)return;c.balance=Math.round((c.balance-r.cost)*100)/100;S.history.push({id:uid(),cid:shopFor,type:'spend',amount:r.cost,desc:'Récompense : '+r.title,date:new Date().toISOString()});save();toast('🎉 '+r.title.toUpperCase()+' DÉBLOQUÉ !');}
+function delTask(tid){var arr=[];for(var i=0;i<S.tasks.length;i++){if(S.tasks[i].id!==tid)arr.push(S.tasks[i]);}S.tasks=arr;save();}
+function delReward(rid){var arr=[];for(var i=0;i<S.rewards.length;i++){if(S.rewards[i].id!==rid)arr.push(S.rewards[i]);}S.rewards=arr;save();}
+function getVal(id){var el=$(id);return el?el.value:'';}
+function saveTask(){var title=getVal('tt').replace(/^\s+|\s+$/g,''),val=parseFloat(getVal('tv')),assign=getVal('ta')||'both';if(!title){toast('⚠ ENTREZ UN NOM');return;}if(!val||val<=0){toast('⚠ MONTANT INVALIDE');return;}S.tasks.push({id:uid(),title:title,value:val,assign:assign,icon:modal.emoji||'📌',done:{}});save();closeModal();toast('✅ MISSION AJOUTÉE');}
+function saveReward(){var title=getVal('rt').replace(/^\s+|\s+$/g,''),cost=parseFloat(getVal('rc'));if(!title){toast('⚠ ENTREZ UN NOM');return;}if(!cost||cost<=0){toast('⚠ MONTANT INVALIDE');return;}S.rewards.push({id:uid(),title:title,cost:cost,icon:modal.emoji||'🎁'});save();closeModal();toast('🛍️ RÉCOMPENSE AJOUTÉE');}
+function saveAdjust(){var cid=getVal('ac'),amount=parseFloat(getVal('am')),type=getVal('at'),desc=getVal('ar').replace(/^\s+|\s+$/g,'')||'Ajustement';if(!amount||amount<=0){toast('⚠ MONTANT INVALIDE');return;}var c=S.children[cid];if(type==='earn')c.balance=Math.round((c.balance+amount)*100)/100;else c.balance=Math.max(0,Math.round((c.balance-amount)*100)/100);S.history.push({id:uid(),cid:cid,type:type,amount:amount,desc:desc,date:new Date().toISOString()});save();closeModal();toast('✅ SOLDE AJUSTÉ');}
+function bind(){for(var i=0;i<4;i++){(function(idx){var el=$('pd'+idx);if(!el)return;el.addEventListener('input',function(){var v=this.value.replace(/\D/g,'');this.value=v.slice(-1);if(this.value&&idx<3){var n=$('pd'+(idx+1));if(n)n.focus();}var ok=true;for(var j=0;j<4;j++){var d=$('pd'+j);if(!d||d.value.length!==1){ok=false;break;}}if(ok)checkPin();});el.addEventListener('keydown',function(e){if(e.keyCode===8&&!this.value&&idx>0){var p=$('pd'+(idx-1));if(p)p.focus();}});})(i);}}
+function checkPin(){var pin='';for(var i=0;i<4;i++){var d=$('pd'+i);pin+=d?(d.value||''):'';}if(pin===(S.pin||'1234')){pm=true;closeModal();toast('🔓 ACCÈS ADMIN ACTIVÉ');}else{var e=$('pin-err');if(e)e.textContent='NIP INCORRECT';for(var j=0;j<4;j++){var d2=$('pd'+j);if(d2)d2.value='';}var f=$('pd0');if(f)f.focus();}}
+DB.ref('.info/connected').on('value',function(snap){online=snap.val()===true;if(S)render();});
+REF.on('value',function(snapshot){var data=snapshot.val();if(data){S=normalizeState(data);render();}else{S=deepCopy(DEFAULTS);render();REF.set(S).catch(function(err){console.error('Firebase init:',err);toast('⚠ ERREUR INIT Firebase');});}},function(err){console.error('Firebase read:',err);$('app').innerHTML='<div class="loading-screen"><div style="font-size:32px;margin-bottom:12px">⚠️</div><div class="loading-txt" style="color:var(--red)">Erreur Firebase</div><div style="font-family:\'Rajdhani\',sans-serif;font-size:12px;color:var(--sub);margin-top:8px;text-align:center;padding:0 20px">'+err.message+'</div></div>';});
 </script>
 </body>
 </html>
