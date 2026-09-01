@@ -221,7 +221,7 @@ function normalizeState(data){
   for(var k=0;k<rawH.length;k++){if(rawH[k])s.history.push(rawH[k]);}
   return s;
 }
-function save(){if(!S)return;REF.set(S).catch(function(err){console.error('Firebase:',err);toast('⚠ ERREUR SYNC');});}
+function save(){if(!S)return;var data=deepCopy(S);for(var i=0;i<data.tasks.length;i++){if(data.tasks[i].done&&Object.keys(data.tasks[i].done).length===0){data.tasks[i].done=null;}}REF.set(data).catch(function(err){console.error('Firebase:',err);toast('⚠ ERREUR SYNC');});}
 function getDone(task,pid){if(!task.done)return null;return task.done[pid]||null;}
 function totalEarned(cid){var t=0;for(var i=0;i<S.history.length;i++){if(S.history[i].cid===cid&&S.history[i].type==='earn')t+=S.history[i].amount;}return t;}
 function lvlOf(cid){var te=totalEarned(cid);return{lvl:Math.floor(te/15)+1,pct:(te%15)/15};}
